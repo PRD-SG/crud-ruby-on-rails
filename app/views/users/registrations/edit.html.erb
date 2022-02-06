@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row g-3">
+    <div class="col-md-12">
+      <div class="title_page d-flex justify-content-center align-items-center">
+        Edit <%= resource_name.to_s.humanize %>
+      </div>
+    </div>
+  <%= form_for(resource, as: resource_name, url:registration_path(resource_name), html: { method: :put }) do |f| %>
+    <div class="col-md-12 d-flex justify-content-center mt-2">
+      <div class="col-md-6">
+        <%= f.label :email ,class: "form-label "%><br />
+        <%= f.email_field :email, autofocus: true, autocomplete:"email",class:"form-control border border-dark" %>
+      </div>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center">
+      <div class="col-md-6">
+        <%= f.label :password ,class: "form-label"%>
+        <%= f.password_field :password, autocomplete:"off",class:"form-control border border-dark" %>
+      </div>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center">
+      <div class="col-md-6">
+        <%= f.label :password_confirmation ,class: "form-label"%><br />
+        <%= f.password_field :password_confirmation, autocomplete:"new-password",class:"form-control border border-dark" %>
+      </div>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center">
+      <div class="col-md-6">
+        <%= f.label :current_password, class: "form-label" %>
+        <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control border border-dark"%>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 d-flex justify-content-center mt-2 ale">
+    <div class="col-md-6 d-flex justify-content-center">
+      <%= render"users/shared/error_messages", resource: resource %>
+    </div>
+  </div>
+  <div class="col-md-12 d-flex justify-content-center mt-2">
+    <div class="col-md-6 d-flex justify-content-center mt-2">
+      <%= f.submit "Update" ,class: "btn btn-dark btn-w"%>
+    </div>
+  </div>
+  <% end %><br />
+  <div class="row g-3">
+    <div class="col-md-12">
+      <div class="title_page d-flex justify-content-center align-items-center">
+        Cancel my account
+      </div>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center">
+      <%= button_to "Cancel my account",registration_path(resource_name), data:
+      { confirm: "Are you sure?" },method: :delete, class: "btn btn-outline-danger btn-sm" %>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center mt-4">
+      <div class="col-md-4">
+        <%= link_to "Back", root_path ,class: "btn btn-dark btn-w" %>
+      </div>
+    </div>
+  </div>
+</div>
