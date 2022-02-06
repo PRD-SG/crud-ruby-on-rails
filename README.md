@@ -5,6 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
+## URL
+https://paradontw.herokuapp.com/
+
 ## Prerequisites
 * Ruby 3.0.2
 * Rails 6
