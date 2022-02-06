@@ -9,10 +9,6 @@ Things you may want to cover:
 * Ruby 3.0.2
 * Rails 6
 * PostgreSQL
-
-* Database creation
-```
-
 ## Setup project
 1. Clone crud-ruby-on-rails repository 
 2. Go to crud-ruby-on-rails source code directory: `cd crud-ruby-on-rails`
